@@ -1,1 +1,21 @@
-hello world 
+mkdir docker
+    2  cd docker/
+    3  sudo apt-get update
+    4  sudo apt-get install docker.io 
+    5  sudo docker --version
+    6  sudo docker pull ubuntu
+    7  docker images
+    8  sudo docker images
+    9  sudo docker run -it -d ubuntu      {it=ineract with terminal; -d = run backround image}
+   10  sudo docker ps                       #runing containers
+   11  sudo docker stop 7d0e5c9ef8af 
+   12  sudo docker run -it -d ubuntu
+   13  sudo docker ps -a                    # lis all containers stop/run
+   14  sudo docker exec -it 577a519351ed bash -----------#bash=run in my terminal
+sudo docker commit <ca24ccb7e7f6--id > <test name of container>
+
+sudo docker rm -f $(sudo docker ps -a -q)
+ sudo docker commit 9bba51e26430 pranathipranu/apache
+sudo docker run -it -p 82:80 -d pranathipranu/apache
+
+
