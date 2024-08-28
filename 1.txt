@@ -10,12 +10,29 @@ mkdir docker
    10  sudo docker ps                       #runing containers
    11  sudo docker stop 7d0e5c9ef8af 
    12  sudo docker run -it -d ubuntu
-   13  sudo docker ps -a                    # lis all containers stop/run
-   14  sudo docker exec -it 577a519351ed bash -----------#bash=run in my terminal
+   13  sudo  docker ps -a                    # lis all containers stop/run
+   14  sudo docker exec -it 577a519351ed bash-----------#bash=run in my terminal
 sudo docker commit <ca24ccb7e7f6--id > <test name of container>
 
 sudo docker rm -f $(sudo docker ps -a -q)
  sudo docker commit 9bba51e26430 pranathipranu/apache
 sudo docker run -it -p 82:80 -d pranathipranu/apache
+sudo usermod -aG docker $USER    ========always skiping to use sudo on docker and relogin
+docker build . -t <new_dockerfile> file name
 
+dockerfile-code
+FROM ubuntu
+RUN apt-get update
+RUN apt-get -y install apache2
+ADD . /var/www/html
+ENTRYPOINT apachectl -D FOREGROUND
+ENV name intelipaat
+
+1.html
+<html>
+<title>hello world</title>
+<body>
+<hi>hello from intel</hi>
+</body>
+</html>
 
