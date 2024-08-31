@@ -1,3 +1,25 @@
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     9  sudo chmod +x /usr/local/bin/docker-compose
    10  docker compose --version
+
+
+
+docker-compose.yml
+version: "3.9" # specify the version of the compose file format
+
+services: # define the services or containers that make up your application
+
+  web: # name of the first service
+    image: nginx # name of the image to use for this service
+    ports: # list of ports to expose on the host machine
+      - "80:80"
+
+  web:
+    image: apache2
+    ports:
+      - "82:80"
+
+
+
+sudo docker-compose up -d  #buid file
+sudo docker-compose down    # delete file
