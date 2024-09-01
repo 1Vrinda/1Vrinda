@@ -1,0 +1,12 @@
+ansible installation
+sudo apt install software-properties-common
+sudo apt-add-repository ppa:ansible/ansible    #its repository 
+sudo apt-get update
+sudo apt insall ansible
+
+
+on host 
+
+sudo apt-get update
+    3  sudo apt-get install python
+    4  sudo apt-get install python-is-python3
