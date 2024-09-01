@@ -1,0 +1,9 @@
+master
+  sudo docker swarm init --advertise-addr= ip#of master to give node then genarated a token
+sudo docker swarm leave --force
+
+service creating 
+    5  sudo docker service create --name nginx --replicas 3 -p 80:80 nginx
+    6  sudo docker service ls
+    7  docker ps
+    8  sudo docker ps
