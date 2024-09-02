@@ -1,0 +1,38 @@
+/etc/ansible/roles$ sudo ansible-galaxy init web --offline
+- Role web was created successfully
+
+
+/etc/ansible/roles$ ls
+web
+
+
+/etc/ansible/roles$ tree web
+web
+├── README.md
+├── defaults
+│   └── main.yml
+├── files
+├── handlers
+│   └── main.yml
+├── meta
+│   └── main.yml
+├── tasks
+│   └── main.yml
+├── templates
+├── tests
+│   ├── inventory
+│   └── test.yml
+└── vars
+    └── main.yml
+
+9 directories, 8 files
+ubuntu@ip-172-31-81-1:/etc/ansible/roles$ cd web
+ubuntu@ip-172-31-81-1:/etc/ansible/roles/web$ cd tasks/
+ubuntu@ip-172-31-81-1:/etc/ansible/roles/web/tasks$ vim main.yml 
+
+---
+# tasks file for web
+- include: install.yml
+- include: configure.yml
+- include: service.yml
+~                      
