@@ -1,0 +1,27 @@
+---
+
+- hosts: slave2
+  become: yes
+  name: play1
+  tasks:
+    - name: install nginx
+      apt:
+        name: nginx
+        update_cache: yes
+        state: latest
+
+- hosts: slave3
+  become: yes
+  name: play1
+  tasks:
+    - name: install apache2
+      apt:
+        name: apache2
+        update_cache: yes
+        state: latest
+    - name: adding website
+      script: hello.sh
+
+
+
+      script must be done on hello.sh file
