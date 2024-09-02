@@ -10,3 +10,37 @@ on host
 sudo apt-get update
     3  sudo apt-get install python
     4  sudo apt-get install python-is-python3
+
+adding====keys==
+.ssh command ssh-keygen
+cat pub key
+add this keys to host server
+on .ssh/authorisekey
+
+on master server .ssh  ubuntu@34.226.153.2 #directly login to slave server
+
+on ansible .ssh/etc/ansible/hosts edit 
+
+
+[production]   #any group name $ many number of slaves add on master
+
+slave ansible_ssh_host=54.197.147.225      #slave name any
+
+
+
+commands line 
+ansible -m ping production 0r slave
+ping=pong
+
+
+playbook of html
+
+
+ubuntu@ip-172-31-81-1:~/ansible$ sudo vim hello.sh
+
+#!/bin/sh
+
+echo hello world baby >/var/www/html/1.html
+~                                             
+
+
