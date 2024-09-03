@@ -1,0 +1,19 @@
+ansible error 
+---
+- include: install.yml
+- include: configure.yml
+- include: service.yml
+ubuntu@ip-172-31-93-15:/etc/ansible$ sudo ansible-playbook site.yml --syntax-check
+[WARNING]: While constructing a mapping from /etc/ansible/roles/web/tasks/main.yml, line 3, column 3, found a
+duplicate dict key (include). Using last defined value only.
+ERROR! [DEPRECATED]: ansible.builtin.include has been removed. Use include_tasks or import_tasks instead. This feature was removed from ansible-core in a release after 2023-05-16. Please update your playbooks.
+
+The error appears to be in '/etc/ansible/roles/web/tasks/main.yml': line 3, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+# tasks file for web
+- include: install.yml
+  ^ here
+ubuntu@ip-172-31-93-15:/etc/ansible$ c
