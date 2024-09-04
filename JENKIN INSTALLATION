@@ -1,0 +1,33 @@
+jenkins
+
+
+Just run this code step by step it will 
+
+sudo apt update21
+
+
+
+
+
+sudo apt install openjdk-17-jre
+
+java -version
+ 
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+sudo apt-get update
+
+sudo apt-get install jenkins
+
+sudo systemctl start jenkins.service
+
+sudo systemctl status jenkins
+
+aws console ec2 ip with :8080 copy path and past on terminal [sudo cat pat] it will gives a password then past on jenkin page
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword                               wast:puqGev-6ryhva-radvos
+
+
