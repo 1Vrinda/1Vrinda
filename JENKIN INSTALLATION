@@ -3,7 +3,7 @@ jenkins
 
 Just run this code step by step it will 
 
-sudo apt update21
+sudo apt update  21
 
 
 
@@ -27,7 +27,7 @@ sudo systemctl start jenkins.service
 
 sudo systemctl status jenkins
 
-aws console ec2 ip with :8080 copy path and past on terminal [sudo cat pat] it will gives a password then past on jenkin page
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword                               wast:puqGev-6ryhva-radvos
+#aws console ec2 ip with :8080 copy path and past on terminal [sudo cat pat] it will gives a password then past on jenkin page
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword                               wast:Xygvoj-4bobcy-nuddah
 
 
