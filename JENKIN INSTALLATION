@@ -25,6 +25,9 @@ sudo apt-get install jenkins
 
 sudo systemctl start jenkins.service
 
+
+jenkins home path = /usr/lib/jvm/java-17-openjdk-amd64
+
 sudo systemctl status jenkins
 
 #aws console ec2 ip with :8080 copy path and past on terminal [sudo cat pat] it will gives a password then past on jenkin page
